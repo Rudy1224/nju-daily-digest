@@ -1,6 +1,6 @@
 # A Daily Events Digest Mailing Program
 
-This program is inspired by CityU's [daily announcement digest](www.cityu.edu.hk/cccu/doc/Access_ePortal_email_2015.pdf) during my exchange.<br>
+This program is inspired by CityU's [daily announcement digest](https://www.cityu.edu.hk/cccu/doc/Access_ePortal_email_2015.pdf) during my exchange.<br>
 Emails will be sent automatically everyday, saving your time checking different websites.
 
 ### Sample Email
