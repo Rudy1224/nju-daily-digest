@@ -1,3 +1,4 @@
+import sys
 import re
 import time
 import json
@@ -9,7 +10,7 @@ from smtplib import SMTP_SSL
 
 # read configurations
 config = configparser.ConfigParser()
-config.read('account.ini')
+config.read(sys.path[0]+'/account.ini')
 SMTP_SERVER = config['lectures.py']['server']
 SMTP_PORT = config['lectures.py']['port']
 FROM_ADDR = config['lectures.py']['from']
