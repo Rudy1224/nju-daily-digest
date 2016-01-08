@@ -78,7 +78,6 @@ def query_aqi():
 def query_weather():
     # get weather information
     weather_detail = requests.get('http://d1.weather.com.cn/sk_2d/101190101.html',
-                                  params={'_':1451577174497},
                                   headers={'Referer': 'http://m.weather.com.cn/mweather/101190101.shtml'})
     weather_detail.encoding = 'utf8'
     try:
