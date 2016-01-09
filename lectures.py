@@ -77,8 +77,12 @@ def query_aqi():
 
 def query_weather():
     # get weather information
-    weather_detail = requests.get('http://d1.weather.com.cn/sk_2d/101190101.html',
-                                  headers={'Referer': 'http://m.weather.com.cn/mweather/101190101.shtml'})
+    try:
+        weather_detail = requests.get('http://d1.weather.com.cn/sk_2d/101190101.html',
+                                      headers={'Referer': 'http://m.weather.com.cn/mweather/101190101.shtml'})
+    except:
+        query_weather()
+
     weather_detail.encoding = 'utf8'
     try:
         w = json.loads(weather_detail.text[13:])
