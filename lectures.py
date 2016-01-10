@@ -80,10 +80,10 @@ def query_weather():
     try:
         weather_detail = requests.get('http://d1.weather.com.cn/sk_2d/101190101.html',
                                       headers={'Referer': 'http://m.weather.com.cn/mweather/101190101.shtml'})
+        weather_detail.encoding = 'utf8'
     except:
         query_weather()
 
-    weather_detail.encoding = 'utf8'
     try:
         w = json.loads(weather_detail.text[13:])
         return '<i>当前天气</i>：{}，'\
